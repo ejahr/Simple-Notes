@@ -44,7 +44,7 @@ class WidgetAdapter(val context: Context, val intent: Intent) : RemoteViewsServi
             return RemoteViews(context.packageName, R.layout.widget_text_layout)
         }
 
-        val textSize = context.getPercentageFontSize() / context.resources.displayMetrics.density
+        val textSize = context.getPercentageFontSize() * 1.2f / context.resources.displayMetrics.density
         if (note!!.type == NoteType.TYPE_CHECKLIST) {
             remoteView = RemoteViews(context.packageName, R.layout.item_checklist_widget).apply {
                 val checklistItem = checklistItems.getOrNull(position) ?: return@apply
