@@ -12,9 +12,9 @@
         android:background="@null"
         android:gravity="start"
         android:paddingStart="@dimen/normal_margin"
-        android:paddingTop="@dimen/tiny_margin"
+        android:paddingTop="@dimen/small_margin"
         android:paddingEnd="@dimen/medium_margin"
-        android:paddingBottom="@dimen/tiny_margin"
+        android:paddingBottom="@dimen/small_margin"
         android:visibility="gone" />
 
     <TextView
