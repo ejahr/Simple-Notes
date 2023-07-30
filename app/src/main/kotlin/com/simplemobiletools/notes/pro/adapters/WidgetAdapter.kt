@@ -52,7 +52,7 @@ class WidgetAdapter(val context: Context, val intent: Intent) : RemoteViewsServi
                 val paintFlags = if (checklistItem.isDone) Paint.STRIKE_THRU_TEXT_FLAG or Paint.ANTI_ALIAS_FLAG else Paint.ANTI_ALIAS_FLAG
 
                 for (id in checklistIds) {
-                    setText(id, checklistItem.title)
+                    setText(id, checklistItem.title.prependIndent("· "))
                     setTextColor(id, widgetNewTextColor)
                     setTextSize(id, textSize)
                     setInt(id, "setPaintFlags", paintFlags)
